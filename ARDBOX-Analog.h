@@ -32,7 +32,7 @@
 #define I0_8					A4
 #define I0_9					A5
 
-// DIGITAL_OUTPUTS
+// DIGITAL OUTPUTS
 #define Q0_0					13
 #define Q0_1					11
 #define Q0_2					10
