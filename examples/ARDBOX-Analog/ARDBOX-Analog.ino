@@ -44,57 +44,57 @@ DIGITAL/ANALOG OUT SWITCH ZONE
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 void setup() {
-	// Configure INPUT pins
-	pinMode(I0_0, INPUT);
-	pinMode(I0_1, INPUT);
-	pinMode(I0_2, INPUT);
-	pinMode(I0_3, INPUT);
-	pinMode(I0_4, INPUT);
-	pinMode(I0_5, INPUT);
-	pinMode(I0_6, INPUT);
-	pinMode(I0_7, INPUT);
-	pinMode(I0_8, INPUT);
-	pinMode(I0_9, INPUT);
+  // Configure INPUT pins
+  pinMode(I0_0, INPUT);
+  pinMode(I0_1, INPUT);
+  pinMode(I0_2, INPUT);
+  pinMode(I0_3, INPUT);
+  pinMode(I0_4, INPUT);
+  pinMode(I0_5, INPUT);
+  pinMode(I0_6, INPUT);
+  pinMode(I0_7, INPUT);
+  pinMode(I0_8, INPUT);
+  pinMode(I0_9, INPUT);
 
-	// Configure DIGITAL OUTPUT pins
-	pinMode(Q0_0, OUTPUT);
-	pinMode(Q0_1, OUTPUT);
-	pinMode(Q0_2, OUTPUT);
-	pinMode(Q0_3, OUTPUT);
-	pinMode(Q0_4, OUTPUT);
-	pinMode(Q0_5, OUTPUT);
-	pinMode(Q0_6, OUTPUT);
-	pinMode(Q0_7, OUTPUT);
-	pinMode(Q0_8, OUTPUT);
-	pinMode(Q0_9, OUTPUT);
+  // Configure DIGITAL OUTPUT pins
+  pinMode(Q0_0, OUTPUT);
+  pinMode(Q0_1, OUTPUT);
+  pinMode(Q0_2, OUTPUT);
+  pinMode(Q0_3, OUTPUT);
+  pinMode(Q0_4, OUTPUT);
+  pinMode(Q0_5, OUTPUT);
+  pinMode(Q0_6, OUTPUT);
+  pinMode(Q0_7, OUTPUT);
+  pinMode(Q0_8, OUTPUT);
+  pinMode(Q0_9, OUTPUT);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 void loop() {
-	// Toggle pins once a second
-	digitalWrite(Q0_0, HIGH);
-	digitalWrite(Q0_1, HIGH);
-	digitalWrite(Q0_2, HIGH);
-	digitalWrite(Q0_3, HIGH);
-	digitalWrite(Q0_4, HIGH);
-	digitalWrite(Q0_5, HIGH);
-	digitalWrite(Q0_6, HIGH);
-	digitalWrite(Q0_7, HIGH);
-	digitalWrite(Q0_8, HIGH);
-	digitalWrite(Q0_9, HIGH);
+  // Toggle pins once a second
+  digitalWrite(Q0_0, HIGH);
+  digitalWrite(Q0_1, HIGH);
+  digitalWrite(Q0_2, HIGH);
+  digitalWrite(Q0_3, HIGH);
+  digitalWrite(Q0_4, HIGH);
+  digitalWrite(Q0_5, HIGH);
+  digitalWrite(Q0_6, HIGH);
+  digitalWrite(Q0_7, HIGH);
+  digitalWrite(Q0_8, HIGH);
+  digitalWrite(Q0_9, HIGH);
 
-	delay(1000);
+  delay(1000);
 
-	digitalWrite(Q0_0, LOW);
-	digitalWrite(Q0_1, LOW);
-	digitalWrite(Q0_2, LOW);
-	digitalWrite(Q0_3, LOW);
-	digitalWrite(Q0_4, LOW);
-	digitalWrite(Q0_5, LOW);
-	digitalWrite(Q0_6, LOW);
-	digitalWrite(Q0_7, LOW);
-	digitalWrite(Q0_8, LOW);
-	digitalWrite(Q0_9, LOW);
+  digitalWrite(Q0_0, LOW);
+  digitalWrite(Q0_1, LOW);
+  digitalWrite(Q0_2, LOW);
+  digitalWrite(Q0_3, LOW);
+  digitalWrite(Q0_4, LOW);
+  digitalWrite(Q0_5, LOW);
+  digitalWrite(Q0_6, LOW);
+  digitalWrite(Q0_7, LOW);
+  digitalWrite(Q0_8, LOW);
+  digitalWrite(Q0_9, LOW);
 
-	delay(1000);
+  delay(1000);
 }
