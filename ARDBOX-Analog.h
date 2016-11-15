@@ -53,4 +53,10 @@
 #define A0_5					5
 #define A0_6					3
 
+// RS485
+#define RS485_RX				11 // RO
+#define RS485_TX				10 // DI
+#define RS485_MODE				7 // DE
+#define RS485_EN				4 // RE 
+
 #endif

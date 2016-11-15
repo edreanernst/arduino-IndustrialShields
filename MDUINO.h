@@ -58,7 +58,7 @@
 #define I2_9					A14
 #define I2_10					A15
 
-// OUTPUTS
+// DIGITAL OUTPUTS
 #define Q0_0					36
 #define Q0_1					37
 #define Q0_2					38
@@ -81,5 +81,21 @@
 #define Q2_3					49
 #define Q2_5					12
 #define Q2_6					13
+
+// ANALOG OUTPUTS
+#define A0_5					Q0_5
+#define A0_6					Q0_6
+#define A0_7					Q0_7
+#define A1_5					Q1_5
+#define A1_6					Q1_6
+#define A1_7					Q1_7
+#define A2_5					Q2_5
+#define A2_6					Q2_6
+
+// RS485
+#define RS485_RX				11 // RO
+#define RS485_TX				10 // DI
+#define RS485_MODE				14 // DE
+#define RS485_EN				15 // RE 
 
 #endif

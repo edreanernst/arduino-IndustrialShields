@@ -85,4 +85,10 @@
 #define R2_7					48
 #define R2_8					47
 
+// RS485
+#define RS485_RX				11 // RO
+#define RS485_TX				10 // DI
+#define RS485_MODE				14 // DE
+#define RS485_EN				15 // RE 
+
 #endif

@@ -15,41 +15,15 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __INDUSTRIALSHIELDS_ARDBOX_RELAY_H__
-#define __INDUSTRIALSHIELDS_ARDBOX_RELAY_H__
+#ifndef __INDUSTRIALSHIELDS_IS_H__
+#define __INDUSTRIALSHIELDS_IS_H__
 
-#include <Arduino.h>
+/* Reads an analog input pin in mV
+ */
+int voltageRead(int pin);
 
-// DIGITAL INPUTS
-#define I0_0					2
-#define I0_1					3
-#define I0_2					0
-#define I0_3					1
-#define I0_4					A0
-#define I0_5					A1
-#define I0_6					A2
-#define I0_7					A3
-#define I0_8					A4
-#define I0_9					A5
-
-// DIGITAL OUTPUTS
-#define Q0_0					5
-#define Q0_1					6
-
-// RELAY OUTPUTS
-#define R1						4
-#define R2						7
-#define R3						8
-#define R4						9
-#define R5						10
-#define R6						11
-#define R7						12
-#define R8						13
-
-// RS485
-#define RS485_RX				11 // RO
-#define RS485_TX				10 // DI
-#define RS485_MODE				7 // DE
-#define RS485_EN				4 // RE 
+/* Sets an analog output pin in mV
+ */
+void voltageWrite(int pin, int voltage);
 
 #endif
