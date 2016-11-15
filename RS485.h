@@ -41,7 +41,7 @@ class RS485Class : public SoftwareSerial {
 		virtual size_t write(const uint8_t *buff, size_t len) {
 			digitalWrite(_modePin, RS485_MODE_TX);
 			size_t ret = SoftwareSerial::write(buff, len);
-			digitalWrite(_enPin, RS485_MODE_RX);
+			digitalWrite(_modePin, RS485_MODE_RX);
 			return ret;
 		}
 
