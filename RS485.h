@@ -26,6 +26,7 @@
 
 class RS485Class : public SoftwareSerial {
 	public:
+		////////////////////////////////////////////////////////////////////////////////////////////////////
 		RS485Class(uint8_t rxPin, uint8_t txPin, uint8_t modePin, uint8_t enPin) : SoftwareSerial(rxPin, txPin) {
 			_modePin = modePin;
 			_enPin = enPin;
@@ -38,6 +39,15 @@ class RS485Class : public SoftwareSerial {
 		}
 
 	public:
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+		virtual size_t write(uint8_t value) {
+			digitalWrite(_modePin, RS485_MODE_TX);
+			size_t ret = SoftwareSerial::write(value);
+			digitalWrite(_modePin, RS485_MODE_TX);
+			return ret;
+		}
+
+		////////////////////////////////////////////////////////////////////////////////////////////////////
 		virtual size_t write(const uint8_t *buff, size_t len) {
 			digitalWrite(_modePin, RS485_MODE_TX);
 			size_t ret = SoftwareSerial::write(buff, len);
