@@ -16,8 +16,10 @@ void TimeClass::update() {
 	unsigned long delay = now - lastMillis;
 
 	_millis += delay;
-	_timestamp += _millis / 1000;
-	_millis %= 1000;
+	if (_millis >= 1000) {
+		_timestamp += _millis / 1000;
+		_millis %= 1000;
+	}
 
 	lastMillis = now;
 }
