@@ -18,6 +18,8 @@
 #ifndef __INDUSTRIALSHIELDS_IS_H__
 #define __INDUSTRIALSHIELDS_IS_H__
 
+#include "time.h"
+
 /* Reads an analog input pin in mV
  */
 int voltageRead(int pin);
