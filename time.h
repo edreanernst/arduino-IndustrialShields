@@ -19,6 +19,7 @@
 #define __INDUSTRIALSHIELDS_TIME_H__
 
 typedef unsigned long time_t;
+typedef unsigned long millis_t;
 
 /* Reads the current time
  */
