@@ -27,4 +27,6 @@ time_t time() {
 time_t setTime(time_t t, millis_t m) {
 	_time = t;
 	_millis = m;
+
+	return _time;
 }
