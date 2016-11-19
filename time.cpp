@@ -1,3 +1,5 @@
+#include <Arduino.h>
+
 #include "time.h"
 
 static time_t _time = 0;
