@@ -47,7 +47,7 @@ void setup() {
   pinMode(I0_8, INPUT);
   pinMode(I0_9, INPUT);
 
-  // Configure DIGITAL OUTPUT pins
+  // Configure ANALOG OUTPUT pins
   pinMode(Q0_0, OUTPUT);
   pinMode(Q0_1, OUTPUT);
 
@@ -64,9 +64,7 @@ void setup() {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 void loop() {
-  // Toggle pins once a second
-  digitalWrite(Q0_0, HIGH);
-  digitalWrite(Q0_1, HIGH);
+  // Toggle relays once a second
   digitalWrite(R1, HIGH);
   digitalWrite(R2, HIGH);
   digitalWrite(R3, HIGH);
@@ -78,8 +76,6 @@ void loop() {
 
   delay(1000);
 
-  digitalWrite(Q0_0, LOW);
-  digitalWrite(Q0_1, LOW);
   digitalWrite(R1, LOW);
   digitalWrite(R2, LOW);
   digitalWrite(R3, LOW);
