@@ -25,12 +25,12 @@
 #define I0_1					A11
 #define I0_2					A8
 #define I0_3					A6
-#define I0_4					A0
-#define I0_5					A1
-#define I0_6					A2
-#define I0_7					A3
-#define I0_8					A4
-#define I0_9					A5
+#define I0_4					A5
+#define I0_5					A4
+#define I0_6					A3
+#define I0_7					A2
+#define I0_8					A1
+#define I0_9					A0
 
 // DIGITAL OUTPUTS
 #define Q0_0					13
