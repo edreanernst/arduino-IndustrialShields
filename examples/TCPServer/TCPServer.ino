@@ -15,8 +15,16 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+// Include system libraries
 #include <SPI.h>
 #include <Ethernet.h>
+
+/*
+IMPORTANT: remember to use the modified version of w5100.h header file.
+You can grab the w5100.h file from the extras directory of the
+Industrial Shields library. You might copy it into the Arduino
+Ethernet library: Arduino/libraries/Ethernet/src/utility/w5100.h
+ */
 
 // PLC MAC address: DE:AD:BE:EF:FE:ED
 byte _macAddress[] = {0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED};
