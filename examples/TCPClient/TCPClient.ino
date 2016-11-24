@@ -18,31 +18,6 @@
 #include <SPI.h>
 #include <Ethernet.h>
 
-/* IMPORTANT: SWITCHES configuration
-COMMUNICATION SWITCH - A ZONE
-  SCL: ON
-  SDA: ON
-  RX1: ON
-  TX1: ON
-  Pin3: ON
-  Pin2: ON
-
-DIGITAL/ANALOG OUT SWITCH - B ZONE
-  Q0.7: ON
-  Q0.6: ON
-  Q0.5: ON
-
-DIGITAL/ANALOG OUT SWITCH - C ZONE
-  Q1.7: ON
-  Q1.6: ON
-  Q1.5: ON
-
-DIGITAL/ANALOG OUT SWITCH - D ZONE
-  Q2.7: ON
-  Q2.6: ON
-  Q2.5: ON
-*/
-
 // PLC MAC address: DE:AD:BE:EF:FE:EE
 byte _macAddress[] = {0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEE};
 
