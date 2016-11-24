@@ -20,6 +20,8 @@
 
 #include <Arduino.h>
 
+#if defined(WITH_RS232)
 #define RS232 Serial2
+#endif
 
 #endif // __INDUSTRIALSHIELDS_RS232_H__

@@ -47,9 +47,13 @@
 #define R8						13
 
 // RS485
+#define WITH_RS485
 #define RS485_RX				11 // RO
 #define RS485_TX				10 // DI
 #define RS485_MODE				7 // DE
 #define RS485_EN				4 // RE 
+
+// RS232
+#define WITH_RS232
 
 #endif

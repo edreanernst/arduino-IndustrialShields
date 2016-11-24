@@ -26,40 +26,19 @@
 
 class RS485Class : public SoftwareSerial {
 	public:
-		////////////////////////////////////////////////////////////////////////////////////////////////////
-		RS485Class(uint8_t rxPin, uint8_t txPin, uint8_t modePin, uint8_t enPin) : SoftwareSerial(rxPin, txPin) {
-			_modePin = modePin;
-			_enPin = enPin;
-
-			pinMode(_modePin, OUTPUT);
-			pinMode(_enPin, OUTPUT);
-
-			digitalWrite(_modePin, RS485_MODE_RX);
-			digitalWrite(_enPin, LOW);
-		}
+		RS485Class(uint8_t rxPin, uint8_t txPin, uint8_t modePin, uint8_t enPin);
 
 	public:
-		////////////////////////////////////////////////////////////////////////////////////////////////////
-		virtual size_t write(uint8_t value) {
-			digitalWrite(_modePin, RS485_MODE_TX);
-			size_t ret = SoftwareSerial::write(value);
-			digitalWrite(_modePin, RS485_MODE_TX);
-			return ret;
-		}
-
-		////////////////////////////////////////////////////////////////////////////////////////////////////
-		virtual size_t write(const uint8_t *buff, size_t len) {
-			digitalWrite(_modePin, RS485_MODE_TX);
-			size_t ret = SoftwareSerial::write(buff, len);
-			digitalWrite(_modePin, RS485_MODE_RX);
-			return ret;
-		}
+		virtual size_t write(uint8_t value);
+		virtual size_t write(const uint8_t *buff, size_t len);
 
 	private:
 		uint8_t _modePin;
 		uint8_t _enPin;
 };
 
+#if defined(WITH_RS485)
 static RS485Class RS485(RS485_RX, RS485_TX, RS485_MODE, RS485_EN);
+#endif
 
 #endif // __INDUSTRIALSHIELDS_RS485_H__
