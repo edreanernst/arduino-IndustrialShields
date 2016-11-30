@@ -20,6 +20,9 @@
 
 #include <Arduino.h>
 
+#define ARDBOX
+#define ARDBOX_RELAY
+
 // DIGITAL INPUTS
 #define I0_0					2
 #define I0_1					3

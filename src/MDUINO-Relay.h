@@ -20,6 +20,9 @@
 
 #include <Arduino.h>
 
+#define MDUINO
+#define MDUINO_RELAY
+
 // DIGITAL INPUTS
 #define I0_0					2
 #define I0_1					3

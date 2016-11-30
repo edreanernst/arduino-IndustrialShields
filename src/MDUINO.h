@@ -20,6 +20,8 @@
 
 #include <Arduino.h>
 
+#define MDUINO
+
 // INPUTS
 #define I0_0					22
 #define I0_1					23
