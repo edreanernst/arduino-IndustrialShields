@@ -29,7 +29,7 @@ Ethernet library: Arduino/libraries/Ethernet/src/utility/w5100.h
 // PLC MAC address: DE:AD:BE:EF:FE:ED
 byte _macAddress[] = {0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED};
 
-// PLC static IP address: 192.168.1.223
+// PLC static IP address: 10.0.0.2
 byte _ipAddress[] = {10, 0, 0, 2};
 
 // TCP port to listen

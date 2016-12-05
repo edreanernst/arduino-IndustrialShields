@@ -28,19 +28,19 @@ Ethernet library: Arduino/libraries/Ethernet/src/utility/w5100.h
  */
 
 // PLC MAC address: DE:AD:BE:EF:FE:ED
-byte _macAddress[] = {0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED};
+byte _macAddress[] = {0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEE};
 
-// PLC static IP address: 10.0.0.2
-byte _ipAddress[] = {10, 0, 0, 2};
+// PLC static IP address: 10.0.0.3
+byte _ipAddress[] = {10, 0, 0, 3};
+
+// Server IP address: 10.0.0.2
+byte _serverAddress[] = {10, 0, 0, 2};
 
 // UDP port to listen
 unsigned short _udpPort = 60601;
 
 // UDP server instance
 EthernetUDP _udp;
-
-// The UDP packet received
-byte _packet[UDP_TX_PACKET_MAX_SIZE];
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 void setup() {
@@ -60,17 +60,15 @@ void setup() {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 void loop() {
-  // Wait for a packet
-  int packetSize = _udp.parsePacket();
-  if (packetSize) {
-    // Read received packet
-    _udp.read(_packet, UDP_TX_PACKET_MAX_SIZE);
+  // Prepare a packet to be sent
+  _udp.beginPacket(_serverAddress, _udpPort);
 
-    // And print it to the serial monitor
-    Serial.print("Received packet: ");
-    for (int i = 0; i < packetSize; ++i) {
-      Serial.print(_packet[i], HEX);
-    }
-    Serial.println();
-  }
+  // Prepare the packet data: 0xAB
+  _udp.write('a');
+
+  // And send it to the server
+  _udp.endPacket();
+
+  // Do it periodically, once per second
+  delay(1000);
 }
