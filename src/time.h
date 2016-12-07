@@ -21,9 +21,15 @@
 typedef unsigned long time_t;
 typedef unsigned long millis_t;
 
-/* Reads the current time
+/* Update and reads the current time
  */
 time_t time();
+millis_t timeMillis();
+
+/* Only read the last updated time
+ */
+time_t getTime();
+millis_t getTimeMillis();
 
 /* Sets the current time
  */
