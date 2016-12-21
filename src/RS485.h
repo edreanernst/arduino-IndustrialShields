@@ -19,18 +19,19 @@
 #define __INDUSTRIALSHIELDS_RS485_H__
 
 #include <Arduino.h>
-#include <SoftwareSerial.h>
+#include <SoftwareSerial9.h>
 
 #define RS485_MODE_TX					HIGH
 #define RS485_MODE_RX					LOW
 
-class RS485Class : public SoftwareSerial {
+class RS485Class : public SoftwareSerial9 {
 	public:
 		RS485Class(uint8_t rxPin, uint8_t txPin, uint8_t modePin, uint8_t enPin);
 
 	public:
 		virtual size_t write(uint8_t value);
 		virtual size_t write(const uint8_t *buff, size_t len);
+		virtual size_t write9(uint16_t value);
 
 	private:
 		uint8_t _modePin;
